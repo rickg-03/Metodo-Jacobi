@@ -35,20 +35,8 @@ Metodo Jacobi/
             └── GaussSeidelMetodo.java     
 ```
 
-### Roles de los Módulos:
+### Módulos:
 1. **`Ecuaciones_lineales.SistemaEcuaciones`**: Contiene la matriz de coeficientes $A$, el vector $b$, el punto inicial $x^{(0)}$, la tolerancia de convergencia y el límite máximo de iteraciones.
 2. **`Ecuaciones_lineales.JACOBI.MetodoJacobi`**: Implementa la lógica de Jacobi actualizando los componentes de forma simultánea. Aloja el método estático `calcularError` para la norma infinito relativa.
 3. **`Ecuaciones_lineales.Gauss_seidel.GaussSeidelMetodo`**: Implementa el método de Gauss-Seidel actualizando el vector de soluciones sobre la marcha. Reutiliza el cálculo de error mediante un `import static`.
-4. **`Ecuaciones_lineales.Main`**: Coordina la ejecución de ambos métodos y muestra la tabla comparativa final.
-
----
-
-## 📊 Resultados Obtenidos
-
-| Métrica / Resultado | Método de Jacobi | Método de Gauss-Seidel |
-| :--- | :---: | :---: |
-| **Iteraciones requeridas** | $10$ iteraciones | $5$ iteraciones |
-| **Valor de $x_1$** | $0.999981$ | $1.000000$ |
-| **Valor de $x_2$** | $0.999987$ | $1.000000$ |
-| **Valor de $x_3$** | $0.999988$ | $1.000000$ |
-| **Error Relativo Final** | $0.000030$ | $0.000000$ |
+4. **`Ecuaciones_lineales.Main`**: Ejecuta ambos métodos y muestra la tabla comparativa final.
